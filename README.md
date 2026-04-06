@@ -8,11 +8,10 @@ This repository contains a manual CNN architecture designed to identify pets. To
 ---
 
 ## 🧠 Model Architecture
-The model was built from scratch to balance depth and computational efficiency on a CPU:
-* **4 Convolutional Layers:** Progressively extracting features from simple edges to complex shapes like ears and tails.
-* **MaxPooling:** Reducing dimensionality while retaining important spatial features.
-* **Dropout (0.5):** A regularization technique that randomly shuts off neurons during training to force the model to learn global patterns instead of memorizing pixels.
-* **Data Augmentation:** Randomly flipping, rotating, and zooming images during training to improve real-world performance.
+* **4 Convolutional Layers:** Extracts features from simple edges to complex shapes.
+* **MaxPooling:** Reduces dimensionality while retaining spatial features.
+* **Dropout (0.5):** Prevents memorization by randomly deactivating neurons.
+* **Data Augmentation:** Flips, rotates, and zooms images to improve real-world performance.
 
 ---
 
@@ -23,15 +22,6 @@ The model was built from scratch to balance depth and computational efficiency o
 | **Validation Accuracy** | ~82.10% |
 | **Epochs** | 15 |
 | **Optimizer** | Adam |
-| **Loss Function** | Binary Crossentropy |
-
----
-
-## 💻 Environment
-* **Device:** Asus Vivobook 16X
-* **Processor:** Intel Core i7
-* **RAM:** 16GB
-* **Platform:** Windows (Conda/TensorFlow)
 
 ---
 
@@ -45,5 +35,41 @@ Cat-vs-Dog-recognition/
 │   ├── setup_data.py   # Data organization script
 │   ├── train.py        # Deep Manual training script
 │   └── predict.py      # Inference script for testing
-├── requirements.txt    # Python dependencies
-└── README.md
+└── requirements.txt
+```
+
+🚦 Getting Started
+1. Clone the Repository
+Bash
+git clone [https://github.com/dhruvil-1207/Cat-vs-Dog-recognition.git](https://github.com/dhruvil-1207/Cat-vs-Dog-recognition.git)
+cd Cat-vs-Dog-recognition
+2. Install Dependencies
+Bash
+pip install -r requirements.txt
+3. Setup Dataset (Optional)
+If you wish to re-train the model, place the Kaggle "Dogs vs Cats" images in the data/ folder and run:
+
+Bash
+python src/setup_data.py
+🔍 Training & Prediction
+Phase 1: Training (Optional)
+The repository includes pre-trained weights in the models/ folder. To re-train the model from scratch:
+
+Bash
+python src/train.py
+Phase 2: Prediction
+To test the model on any image, run the inference script:
+
+Bash
+python src/predict.py
+Instructions after execution:
+The script will prompt you for an Image Path. You can provide:
+
+A Relative Path: ../my_pet.jpg
+
+An Absolute Path: D:\Images\dog_test.jpg
+
+A Test Image: ../dataset_final/test/cats/cat.1001.jpg
+
+Output:
+The script returns the predicted animal and a Confidence Score (e.g., RESULT: DOG 🐶 (Confidence: 92.45%)).
