@@ -1,6 +1,8 @@
-# Large datasets
+# Hide the raw and split images
 data/
 dataset_final/
 
-# Zip files
-*.zip
+# Hide system/python junk
+__pycache__/
+.venv/
+.ipynb_checkpoints/
