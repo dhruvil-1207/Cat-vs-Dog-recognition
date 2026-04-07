@@ -8,8 +8,8 @@ BASE_DIR = '../dataset_final/'
 
 def setup():
     for split in ['train', 'test']:
-        for cat in ['cats', 'dogs']:
-            os.makedirs(os.path.join(BASE_DIR, split, cat), exist_ok=True)
+        for animal in ['cats', 'dogs']:
+            os.makedirs(os.path.join(BASE_DIR, split, animal), exist_ok=True)
 
     all_images = [f for f in os.listdir(SOURCE) if f.endswith('.jpg')]
     random.seed(42)
