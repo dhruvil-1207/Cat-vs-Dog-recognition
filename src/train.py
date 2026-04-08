@@ -44,7 +44,7 @@ model = models.Sequential([
     layers.MaxPooling2D(2, 2),
     
     layers.Flatten(),
-    layers.Dropout(0.5), # This stops the 100% fake confidence!
+    layers.Dropout(0.5),
     layers.Dense(512, activation='relu'),
     layers.Dense(1, activation='sigmoid')
 ])
