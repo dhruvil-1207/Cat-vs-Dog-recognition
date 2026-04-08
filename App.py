@@ -18,7 +18,7 @@ model = load_my_model()
 st.title("🐾 Cat vs Dog Recognition")
 
 # --- DYNAMIC SAMPLE LOADING ---
-SAMPLE_DIR = 'dataset_final/custom'
+SAMPLE_DIR = 'samples'
 if not os.path.exists(SAMPLE_DIR):
     os.makedirs(SAMPLE_DIR)
 
