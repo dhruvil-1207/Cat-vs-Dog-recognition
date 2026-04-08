@@ -10,8 +10,10 @@ st.set_page_config(page_title="Cat vs Dog Classifier", page_icon="🐾")
 
 # --- LOAD MODEL ---
 @st.cache_resource
+@st.cache_resource
 def load_my_model():
-    return tf.keras.models.load_model('models/cat_dog_manual_best.keras')
+    # Change .keras to .h5
+    return tf.keras.models.load_model('models/cat_dog_manual_best.h5')
 
 model = load_my_model()
 
