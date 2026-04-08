@@ -40,28 +40,37 @@ Cat-vs-Dog-recognition/
 
 🚦 Getting Started
 1. Clone the Repository
-Bash
+```
 git clone [https://github.com/dhruvil-1207/Cat-vs-Dog-recognition.git](https://github.com/dhruvil-1207/Cat-vs-Dog-recognition.git)
 cd Cat-vs-Dog-recognition
+```
+
 2. Install Dependencies
-Bash
+```
 pip install -r requirements.txt
+```
+
 3. Setup Dataset (Optional)
 If you wish to re-train the model, place the Kaggle "Dogs vs Cats" images in the data/ folder and run:
-
-Bash
+```
 python src/setup_data.py
+```
+
 🔍 Training & Prediction
 Phase 1: Training (Optional)
 The repository includes pre-trained weights in the models/ folder. To re-train the model from scratch:
 
-Bash
+```
 python src/train.py
+```
+
 Phase 2: Prediction
 To test the model on any image, run the inference script:
 
-Bash
+```
 python src/predict.py
+```
+
 Instructions after execution:
 The script will prompt you for an Image Path. You can provide:
 
